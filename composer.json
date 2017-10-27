@@ -2,8 +2,8 @@
   "name": "greenpeace/planet4-plugin-migrated-urls",
   "description": "This repository contains the WordPress plugin that provides the old and new urls from migrated content from p3 to p4.",
   "type": "wordpress-plugin",
-  "version": "0.0.2",
-  "license": "GPL-3",,
+  "version": "0.0.1",
+  "license": "GPL-3",
   "authors": [
     {
       "name": "Greenpeace International",
