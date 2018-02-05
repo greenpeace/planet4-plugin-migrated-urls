@@ -15,19 +15,20 @@ function migrated_urls_admin_view() {
 }
 
 function migrated_urls() {
-	$sql = 'SELECT meta.meta_value as p3_url , post.ID, post.post_title
-			FROM `wp_postmeta` AS meta,  wp_posts AS post 
-			WHERE meta_key = "p3_url"
-			AND post.id=meta.post_id';
-
 	global $wpdb;
-	$results = $wpdb->get_results( $sql );
-	//print_r($results);
 
-	foreach ( $results as $result ) {
-		echo $result->p3_url;
+	$rd_args = array(
+		'meta_key' => 'p3_url',
+		'posts_per_page' => -1,
+	);
+
+	$rd_query = new WP_Query( $rd_args );
+
+	foreach ( $rd_query->posts as $post ) {
+		$p3_url = get_post_meta($post->ID, 'p3_url');
+		echo $p3_url[0];
 		echo ",";
-		echo get_permalink( $result->ID );
+		echo get_permalink( $post->ID );
 		echo "<br>";
 
 	}
