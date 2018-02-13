@@ -3,7 +3,7 @@
   "description": "This repository contains the WordPress plugin that provides the old and new urls from migrated content from p3 to p4.",
   "type": "wordpress-plugin",
   "version": "0.0.2",
-  "license": "GPL-3",
+  "license": "GPL-3.0+",
   "authors": [
     {
       "name": "Greenpeace International",
